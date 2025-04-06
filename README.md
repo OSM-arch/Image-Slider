@@ -50,9 +50,3 @@ project/
   <li>Adjust timing in <code>app.js</code> (5000ms value)</li>
   <li>Modify styles in <code>style.css</code></li>
 </ul>
-
-<h2>🌐 Browser Support</h2>
-<p>Works on all modern browsers</p>
-
-<h2>📝 License</h2>
-<p>MIT © Your Name</p>
