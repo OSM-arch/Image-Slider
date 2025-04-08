@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function initializeSlider() {
     if (slides.length > 0) {
-        slides[slideIndex].classList.add('displaySlide');
+        slides[slideIndex].classList.add('active');
         slides[slideIndex].querySelector('.slide-caption').classList.add('show');
         setIntervalId = setInterval(nextSlide, 5000);
     }
@@ -24,11 +24,11 @@ function showSlide(index) {
     }
 
     slides.forEach(slide => {
-        slide.classList.remove('displaySlide');
+        slide.classList.remove('active');
         slide.querySelector('.slide-caption').classList.remove('show');
     });
 
-    slides[slideIndex].classList.add('displaySlide');
+    slides[slideIndex].classList.add('active');
     setTimeout( () => {
         slides[slideIndex].querySelector('.slide-caption').classList.add('show');
     }, 500);

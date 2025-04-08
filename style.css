@@ -31,14 +31,19 @@ body, html {
 
 /* Individual slides */
 .slide {
-    display: none;
     min-width: 100vw;
     height: 100vh;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s;
 }
 
-.displaySlide {
-    display: block;
+.slide.active {
+    opacity: 1;
+    visibility: visible;
 }
 
 .slide img {
@@ -58,17 +63,13 @@ body, html {
     color: white;
     padding: 20px;
     text-align: center;
-    transform: translateY(90%);
-    transition: transform 0.5s ease;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    transition-delay: 0s;
 }
 
-/*
-.slide-caption:hover {
-    transform: translateY(0);
-}
-*/
-
-.show {
+.slide.active .slide-caption {
+    transition-delay: 0.5s; /* Delay after slide appears */
     transform: translateY(0);
 }
 
